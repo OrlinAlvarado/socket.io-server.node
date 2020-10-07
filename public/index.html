@@ -27,6 +27,18 @@
             console.log('Escuchando: ', payload);
         })
         
+        socket.on('emitir-mensaje', ( payload ) => {
+            console.log('Escuchando mensaje: ', payload);
+        })
+        
+        socket.on('nuevo-mensaje', ( payload ) => {
+            console.log('Nuevo mensaje: ', payload);
+        })
+        socket.on('active-bands', ( bands ) => {
+            console.clear();
+            console.table( bands );
+        })
+        
         
     </script>
     
